@@ -1,6 +1,8 @@
 package cmd
 
-import "github.com/spf13/cobra"
+import (
+	"github.com/spf13/cobra"
+)
 
 var versionCmd = &cobra.Command{
 	Use:   "version",
@@ -9,8 +11,4 @@ var versionCmd = &cobra.Command{
 	Run: func(cmd *cobra.Command, args []string) {
 		cmd.Println("bmctl version 0.1")
 	},
-}
-
-func init() {
-	rootCmd.AddCommand(versionCmd)
 }

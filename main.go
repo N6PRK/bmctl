@@ -1,13 +1,11 @@
 package main
 
 import (
-	"fmt"
+	"github.com/spf13/cobra"
 
 	"github.com/n6prk/bmctl/cmd"
 )
 
 func main() {
-	if err := cmd.Execute(); err != nil {
-		panic(fmt.Sprintf("failed to execute command: %v", err))
-	}
+	cobra.CheckErr(cmd.Execute())
 }
